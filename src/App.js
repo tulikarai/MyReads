@@ -1,9 +1,9 @@
+import { Route } from 'react-router-dom';
 import React from 'react';
 import * as BooksAPI from './BooksAPI'
 import './App.css';
 import SearchPage from './SearchPage';
 import MainPage from './MainPage';
-import { Route } from 'react-router-dom';
 
 class BooksApp extends React.Component {
   state = {
@@ -21,8 +21,9 @@ class BooksApp extends React.Component {
   }
 
   moveShelf = (book,shelf) => {
-    BooksAPI.update(book,shelf);
-    this.getAllBooks();
+    BooksAPI.update(book, shelf).then(() => {
+      this.getAllBooks();
+    })
   }
 
   render() {
@@ -32,6 +33,7 @@ class BooksApp extends React.Component {
           (<MainPage
               books={ this.state.books }
               moveShelf={this.moveShelf}
+              shelves = {[ 'currentlyReading', 'wantToRead', 'read' ]}
            />
           )}
         />
