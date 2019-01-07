@@ -2,7 +2,7 @@
 
 This is one of my Front End Web Developer NanoDegree Project of Udacity in React. This project can be used to search for book titles and store them on different shelves depending on what you are currently reading, what you have read and what you would like to read.
 
-##Live :## <https://tulikarai.github.io/MyReads_gh_pages>
+[check the project Live]<https://tulikarai.github.io/MyReads_gh_pages>
 
 ## Installation
 In order to install and use this project you must run two commands in the console.
